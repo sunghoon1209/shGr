@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 성훈 - 그라데이션인트로</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Ephesis&display=swap"
+        rel="stylesheet">>
+    <style>
+        body {
+            background: url("./images/gr.svg")no-repeat center/cover;
+            height: 100vh;
+            color: transparent;
+        }
+
+        .box {
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Ephesis', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+        }
+        
+        .ani {
+            font-size: 150px;
+            font-weight: bold;
+            animation: slide-up 1s ease both;
+        }
+
+        /* ease 
+        처음과 끝 느리게 시작
+        끝나는 속도 빠르게 
+
+        both    
+        애니메이션이 완료된 후에도 최종 상태유지
+        끝나면 멈춤  */
+        @keyframes slide-up {
+            0% {
+                transform: translateY(0%);
+                opacity: 0.1;
+            }
+
+            50% {
+                transform: translateY(-200%);
+                color: white;
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: translateY(-100%);
+                color: white; }
+
+
+        }
+
+        .S {
+            animation-delay: 0s;
+        }
+
+        .H {
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .box>.ani.S{s}*2 -->
+    <div class="box">
+        <div class="ani S">S</div>
+        <div class="ani H">H</div>
+    </div>
+
+</body>
+
+</html>
